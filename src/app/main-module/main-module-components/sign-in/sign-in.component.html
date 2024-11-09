@@ -1,0 +1,70 @@
+<div class="container">
+
+
+
+  <section class="login-container">
+    <article class="form-container">
+      <div class="intro">
+        <h1>Welcome Back</h1>
+        <p>Welcome Back, Please Enter Your details</p>
+      </div>
+
+      <form class="form" [formGroup]="signInForm" (ngSubmit)="signInUser()">
+        <div class="email-input">
+          <span class="material-icons-round icon-size"> mail_outline </span>
+          <span id="seperator"></span>
+          <div class="input-container">
+            <p class="sub-title">Email Address</p>
+            <input type="email" name="usermail" id="email" formControlName="email" />
+          </div>
+        </div>
+        <div class="error  text-danger"
+          *ngIf="signInForm.controls['email'].invalid && (signInForm.controls['email'].dirty || signInForm.controls['email'].touched)">
+          <span *ngIf="signInForm.controls['email'].errors.email">
+            <small>Use correct pattern as example@example.com</small></span>
+          <span *ngIf="signInForm.controls['email'].errors.required">
+            <small>Field Required!</small>
+            </span>
+        </div>
+
+        <div class="email-input">
+          <span class="material-icons-round icon-size"> password </span>
+          <span id="seperator"></span>
+          <div class="input-container">
+            <p class="sub-title">Password</p>
+            <input type="password" name="userpass" id="password" formControlName="password" />
+          </div>
+        </div>
+        <div class="error  text-danger"
+          *ngIf="signInForm.controls['password'].invalid && (signInForm.controls['password'].dirty || signInForm.controls['password'].touched)">
+          <span *ngIf="signInForm.controls['password'].errors.minlength || signInForm.controls['password'].errors.maxlength ">
+            <small>Password between 6 to 15 Characters!</small></span>
+          <span *ngIf="signInForm.controls['password'].errors.required">
+            <small>Field Required!</small>
+          </span>
+        </div>
+
+        <button class="btn btn-outline-success" type="submit"  [disabled]="signInForm.pristine || signInForm.invalid">Continue</button>
+        <button id="submit" type="button" routerLink="/sign-up">Not Register Yet</button>
+      </form>
+
+      <article class="outro">
+        <div class="ending">
+          <p>Or Continue With</p>
+        </div>
+        <div class="socials">
+          <a class="social-btn" href="" id="g-btn">
+            <p>Google</p>
+          </a>
+          <a class="social-btn" href="" id="a-btn">
+            <p>Apple</p>
+          </a>
+          <a class="social-btn" href="" id="fb-btn">
+            <p>Facebook</p>
+          </a>
+        </div>
+      </article>
+    </article>
+    <article class="login-side-bg"></article>
+  </section>
+</div>

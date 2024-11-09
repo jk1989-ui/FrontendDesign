@@ -1,0 +1,99 @@
+<div class="container">
+
+
+
+  <section class="login-container">
+    <article class="form-container">
+      <div class="intro">
+        <h1>Welcome Back</h1>
+        <p>Welcome Back, Please Enter Your details</p>
+      </div>
+
+      <form onsubmit="return false;" class="form" [formGroup]="signUpForm" (ngSubmit)="registerUser()">
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Name" formControlName="name">
+          <label for="floatingInput">Name</label>
+        </div>
+        <div class="error  text-danger"
+          *ngIf="signUpForm.controls['name'].invalid && (signUpForm.controls['name'].dirty || signUpForm.controls['name'].touched)">
+          <span *ngIf="signUpForm.controls['name'].errors.minlength || signUpForm.controls['name'].errors.maxlength ">
+            <small>Name between 4 to 10 Characters!</small></span>
+          <span *ngIf="(signUpForm.controls['name'].errors.pattern)">
+            Only Alphabets & Spaces Allowed</span>
+          <span *ngIf="signUpForm.controls['name'].errors.required">
+            <small>Field Required!</small>
+          </span>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="Email" formControlName="email">
+          <label for="floatingInput">Email</label>
+        </div>
+        <div class="error  text-danger"
+          *ngIf="signUpForm.controls['email'].invalid && (signUpForm.controls['email'].dirty || signUpForm.controls['email'].touched)">
+          <span *ngIf="signUpForm.controls['email'].errors.required">
+            <small>Field Required!</small>
+          </span>
+        </div>
+        <div class="error  text-danger"
+          *ngIf="signUpForm.controls['email'].invalid && (signUpForm.controls['email'].dirty || signUpForm.controls['email'].touched)">
+          <span *ngIf="signUpForm.controls['email'].errors.email">
+            <small>Use correct pattern as example@example.com</small></span>
+          <span *ngIf="signUpForm.controls['email'].errors.required">
+            <small>Field Required!</small>
+          </span>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingInput" placeholder="Password"
+            formControlName="password">
+          <label for="floatingInput">Password</label>
+        </div>
+        <div class="error  text-danger"
+          *ngIf="signUpForm.controls['password'].invalid && (signUpForm.controls['password'].dirty || signUpForm.controls['password'].touched)">
+          <span *ngIf="signUpForm.controls['password'].errors.minlength || signUpForm.controls['password'].errors.maxlength ">
+            <small>Name between 6 to 15 Characters!</small></span>
+          <span *ngIf="signUpForm.controls['password'].errors.required">
+            <small>Field Required!</small>
+          </span>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Address" formControlName="address">
+          <label for="floatingInput">Address</label>
+        </div>
+        <div class="error  text-danger"
+          *ngIf="signUpForm.controls['address'].invalid && (signUpForm.controls['address'].dirty || signUpForm.controls['address'].touched)">
+          <span *ngIf="signUpForm.controls['address'].errors.minlength">
+            <small>Address Should be atleas more than 6 characters</small></span>
+          <span *ngIf="signUpForm.controls['address'].errors.required">
+            <small>Field Required!</small>
+          </span>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success"
+          [disabled]="signUpForm.pristine || signUpForm.invalid">Continue</button>
+        <button type="button" routerLink="/sign-in">Already Registered?</button>
+      </form>
+
+      <article class="outro">
+        <div class="ending">
+          <p>Or Continue With</p>
+        </div>
+        <div class="socials">
+          <a class="social-btn" href="" id="g-btn">
+            <p>Google</p>
+          </a>
+          <a class="social-btn" href="" id="a-btn">
+            <p>Apple</p>
+          </a>
+          <a class="social-btn" href="" id="fb-btn">
+            <p>Facebook</p>
+          </a>
+        </div>
+      </article>
+    </article>
+    <article class="login-side-bg"></article>
+  </section>
+</div>

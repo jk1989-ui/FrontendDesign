@@ -1,0 +1,186 @@
+*{ 
+     font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #F5F5F5;
+}
+
+.custom-nav{
+    height: 500px !important;
+    background-image: url('../../../../assets/hero_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.custom-nav-header{
+    background-color: orangered;
+    height: 5px;
+}
+
+.orange-button{
+    background-color: orangered;
+}
+
+.songh{
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+}
+.custom-body{
+    background-color: #ffffff;
+    height: 950px !important;
+    width: 100%;
+
+}
+::placeholder{
+    font-weight: lighter;
+}
+
+.firstsong{
+    background-image: url('../../../../assets/kahani-suno.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.firstsong:hover .fa-circle-play{
+   margin-bottom: 50px;
+   margin-left: 65px;
+   margin-top: 70px;
+   margin-right: 65px;
+   color: #f50;
+
+}
+
+.fa-circle-play{
+    margin-bottom: 50px;
+    margin-left: 65px;
+    margin-top: 70px;
+    margin-right: 65px;
+    color:transparent;
+ }
+
+.icons{
+    margin-left: 85px;
+    
+    
+}
+
+.fa-heart,.fa-user-plus,.fa-ellipsis{
+    color: transparent;
+}
+.firstsong:hover .heart{
+    color: #ffffff!important;
+}
+
+.firstsong:hover .user{
+    color: #ffffff!important;
+}
+.firstsong:hover .dots{
+    color: #ffffff!important;
+}
+
+.kahani{
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}
+.para{
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    opacity: 0.5;
+}
+.btn5{
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+
+}
+.btn-danger:hover{
+
+    margin-left: 40%;
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    height: 46px;
+    padding: 13px 23px;
+    background-color: #f50;
+    border-color: #f50;
+    color: #fff;
+    line-height: 18px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 100;
+    text-align: center;
+    vertical-align: initial;
+    box-sizing: border-box;
+
+}
+
+.btn-danger{
+    margin-left: 40%;
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    height: 46px;
+    padding: 13px 23px;
+    background-color: #f50;
+    border-color: #f50;
+    color: #fff;
+    line-height: 18px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 100;
+    text-align: center;
+    vertical-align: initial;
+    box-sizing: border-box;
+
+}
+
+.mobileimg img{
+    height: 400px;
+    width: 700px;
+    margin-left: 50px;
+}
+
+.mobileh{
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: lighter;
+    margin-bottom: 40px!important;
+}
+
+.mobilep{
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    margin: 0 0 10px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+}
+
+.g-appStoreButton__appStore {
+    width: 120px;
+    background-image: url("https://a-v2.sndcdn.com/assets/images/appstore_badge@en-9e7292e6.png");
+    
+}
+
+.g-appStoreButton {
+    margin-right: 4px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    
+}
+
+.g-appStoreButton__googlePlay {
+    width: 135px;
+    background-image: url("https://a-v2.sndcdn.com/assets/images/google_play_badge@en-51d52194.png");
+}
